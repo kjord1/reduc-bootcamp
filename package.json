@@ -11,5 +11,8 @@
     "bootcamp"
   ],
   "author": "kent.jordan@monsanto.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "~6.26.0"
+  }
 }
