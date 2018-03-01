@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ProfileNameComponent = ({profileName}) => (
+const ProfileNameComponent = ({
+  profileName
+}) => (
   <div>
     <h1>
-      <span className="fa fa-user" aria-hidden="true"/>&nbsp;
-      {profileName}
+      <span className="fa fa-user" aria-hidden="true"/>&nbsp; {profileName}
     </h1>
   </div>
 );
