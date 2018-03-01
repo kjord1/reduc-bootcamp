@@ -1,5 +1,5 @@
 export default {
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: `${__dirname}/src/main.jsx`,
   resolve: {
     extensions: ['.js', '.jsx']
