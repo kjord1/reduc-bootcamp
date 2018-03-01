@@ -17,7 +17,7 @@ const store = createStore(
 
 const RootComponent = () => (
   <Provider store={store}>
-    <div className="containter">
+    <div className="container">
       <div>
         <h1>
           <span className="label label-primary">Reduxbook</span>
