@@ -15,7 +15,8 @@ const RootComponent = () => (<Provider store={store}>
     <br/>
     <div>
       <h1>
-        <span className="fa fa=user" aria-hidden="true"/>&nbsp; Kent Jordan
+        <span className="fa fa-user" aria-hidden="true"/>&nbsp;
+        Kent Jordan
       </h1>
     </div>
   </div>
