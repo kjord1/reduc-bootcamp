@@ -2,8 +2,9 @@ import React from 'react';
 
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
+import reducers from '../reducers'
 
-const store = createStore(() => ({}));
+const store = createStore(reducers);
 
 const RootComponent = () => (<Provider store={store}>
   <div className="containter">
