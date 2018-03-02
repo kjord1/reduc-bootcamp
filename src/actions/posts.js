@@ -10,7 +10,7 @@ const setPosts = (posts) => ({
   posts: posts
 })
 
-export const fetchPosts = () => (dispatch, getState) => {
+export const fetchPosts = () => (dispatch) => {
   dispatch(setPostsStatus('FETCHING'));
 
   agent.get('http://localhost:3000/posts')

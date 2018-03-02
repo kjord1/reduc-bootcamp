@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Post from './post'
 
 const PostsComponent = ({
   postsStatus,
@@ -23,18 +24,19 @@ const PostsComponent = ({
         Here are your posts:
 
         { posts.length > 0 && posts.map((post) => (
-          <div key={post.id} className="panel panel-default">
-            <div className="panel-heading">
-              <div className="row">
-                <div className="pull-right">
-                  {post.created}
-                </div>
-              </div>
-            </div>
-            <div className="panel-body">
-              { post.text }
-            </div>
-          </div>
+          <Post key={post.id} {...post} />
+        //   <div key={post.id} data-id={post.id} className="panel panel-default">
+        //   <div className="panel-heading">
+        //     <div className="row">
+        //       <div className="pull-right">
+        //         {post.created}
+        //       </div>
+        //     </div>
+        //   </div>
+        //   <div className="panel-body">
+        //     { post.text }
+        //   </div>
+        // </div>
         )) }
       </div>
     }
