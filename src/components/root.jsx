@@ -9,6 +9,7 @@ import {
 
 import reducers from '../reducers';
 import ProfileName from '../containers/profile_name';
+import Posts from '../containers/posts';
 
 const store = createStore(
   reducers,
@@ -25,6 +26,7 @@ const RootComponent = () => (
       </div>
       <br/>
       <ProfileName />
+      <Posts />
     </div>
   </Provider>
 );

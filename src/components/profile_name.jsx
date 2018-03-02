@@ -9,7 +9,7 @@ const ProfileNameComponent = ({
   <div>
     <h1>
       <span className="fa fa-user" aria-hidden="true"/>&nbsp;
-      {profileName ? profileName : 'No Value'}
+      {profileName ? profileName : 'Unknown User'}
     </h1>
     <div className="input-group">
       <input
