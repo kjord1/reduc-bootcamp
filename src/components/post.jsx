@@ -2,29 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PostComponent = ({
-  id,
-  created,
-  text
+  post
 }) => (
-  <div data-id={id} className="panel panel-default">
+  <div data-id={post.id} className="panel panel-default">
   <div className="panel-heading">
-    <div className="row">
-      <div className="pull-right">
-        {created}
-      </div>
+    <div className="text-right">
+      {post.created}
     </div>
   </div>
   <div className="panel-body">
-    { text }
+    { post.text }
   </div>
 </div>
 );
 
 PostComponent.displayName = 'PostComponent';
 PostComponent.propTypes = {
-  id: PropTypes.number.isRequired,
-  created: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  post: PropTypes.object.isRequired
 };
 
 export default PostComponent;
