@@ -36,5 +36,6 @@ PreCommit:
   EsLint:
     enabled: true
     #on_warn: fail # Treat all warnings as failures
+    required_executable: 'yarn'
     command: ['yarn', 'run', 'eslint']
-    include: ['*.jsx', '*.js']
+    include: ['**/*.jsx', '**/*.js']
