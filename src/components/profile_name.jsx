@@ -19,7 +19,7 @@ const ProfileNameComponent = ({
         onChange={updateProfileName}
       />
       <span className="input-group-btn">
-        <button type="button" className="btn btn-danger " onClick={clearProfileName}>
+        <button type="button" className="btn btn-danger" onClick={clearProfileName}>
           <span className="fa fa-eraser" />
         </button>
       </span>
