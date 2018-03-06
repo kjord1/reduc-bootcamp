@@ -13,7 +13,7 @@ const setPosts = (posts) => ({
 export const fetchPosts = () => (dispatch) => {
   dispatch(setPostsStatus('FETCHING'));
 
-  agent.get('http://localhost:3000/posts')
+  agent.get('http://localhost:3000/posts/')
     .then((response) => {
       dispatch(setPostsStatus('SUCCESS'));
       dispatch(setPosts(response.body));
