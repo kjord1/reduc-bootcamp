@@ -1,9 +1,9 @@
 import Immutable from 'immutable';
 
 export default (oldState = new Immutable.OrderedMap(), action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'SET_POSTS':
-      return oldState.concat(action.posts.map(post => [post.id, post]));
+      return oldState.concat(action.posts.map((post) => [post.id, post]));
     default:
       return oldState;
   }

@@ -1,8 +1,12 @@
 module.exports = {
-  extends: '@monsantoit/eslint-config-velmat-inventory',
+  extends: 'airbnb',
   plugins: ['react'],
   rules: {
-    indent: [2,2]
+    "comma-dangle": ["error", "never"],
+    "arrow-parens": ["error", "always"],
+    "import/prefer-default-export": "warn",
+    "no-underscore-dangle": "warn",
+    "object-shorthand": ["error", "consistent-as-needed"]
   },
   env: {
     browser: true,

@@ -5,4 +5,4 @@ export default (oldState = 'FAILED', action) => {
     default:
       return oldState;
   }
-}
+};

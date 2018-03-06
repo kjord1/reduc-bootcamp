@@ -1,5 +1,5 @@
+import agent from 'superagent';
 import __RewireAPI__, * as actions from '../../src/actions/posts';
-import agent from 'superagent'
 
 jest.unmock('../../src/actions/posts');
 
@@ -14,7 +14,7 @@ describe('Post actions', () => {
       expect(action).toEqual({
         type: 'SET_POSTS_STATUS',
         postsStatus: status
-      })
+      });
     });
   });
 
@@ -35,9 +35,9 @@ describe('Post actions', () => {
 
       resolvedPromise.then(() => {
         expect(dispatch).toHaveBeenCalled();
-        expect(setPostsStatus).toHaveBeenCalledWith('SUCCESS')
+        expect(setPostsStatus).toHaveBeenCalledWith('SUCCESS');
         done();
       });
-    })
-  })
+    });
+  });
 });

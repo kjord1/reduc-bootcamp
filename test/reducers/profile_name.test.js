@@ -7,7 +7,7 @@ describe('The ProfileName reducer', () => {
     it('the profileName should be an empty string', () => {
       const subject = ProfileName(undefined, {});
       expect(subject).toBe('');
-    })
+    });
   });
 
   describe('when sent an unknown action', () => {
@@ -17,6 +17,6 @@ describe('The ProfileName reducer', () => {
         type: 'NOT_AN_ACTION'
       });
       expect(subject).toBe(state);
-    })
+    });
   });
 });

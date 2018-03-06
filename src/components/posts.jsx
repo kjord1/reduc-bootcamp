@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 
-import Post from '../containers/post'
+import Post from '../containers/post';
 
 const PostsComponent = ({
   postsStatus,
@@ -10,28 +10,28 @@ const PostsComponent = ({
   fetchPosts
 }) => (
   <div>
-    {postsStatus==='FETCHING' && 'Fetching posts from remote...'}
-    {postsStatus==='FAILED' &&
-      <div className="alert alert-danger">
-        <span className="fa fa-exclamation fa-2x" /> Failed to load posts.
-        <br/>
-        <button type="button" className="btn btn-danger" onClick={fetchPosts}>
-          Try Again
-        </button>
-      </div>
+    {postsStatus === 'FETCHING' && 'Fetching posts from remote...'}
+    {postsStatus === 'FAILED' &&
+    <div className="alert alert-danger">
+      <span className="fa fa-exclamation fa-2x" /> Failed to load posts.
+      <br />
+      <button type="button" className="btn btn-danger" onClick={fetchPosts}>
+        Try Again
+      </button>
+    </div>
     }
 
-    {postsStatus==='SUCCESS' &&
-      <div>
-        Here are your posts:
+    {postsStatus === 'SUCCESS' &&
+    <div>
+      Here are your posts:
 
-        { posts.size > 0 && posts.toArray().map((post) => (
-          <Post key={post.id} post={post} />
-        )) }
-      </div>
+      {posts.size > 0 && posts.toArray().map((post) => (
+        <Post key={post.id} post={post} />
+      ))}
+    </div>
     }
   </div>
-)
+);
 
 PostsComponent.displayName = 'PostsComponent';
 PostsComponent.propTypes = {

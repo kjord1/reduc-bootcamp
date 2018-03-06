@@ -1,8 +1,6 @@
-import {
-  connect
-} from 'react-redux';
+import { connect } from 'react-redux';
 import ProfileNameComponent from '../components/profile_name';
-import { setProfileName } from '../actions/profile_name'
+import { setProfileName } from '../actions/profile_name';
 
 const mapStateToProps = (state) => ({
   profileName: state.ProfileName

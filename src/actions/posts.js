@@ -8,15 +8,15 @@ const setPostsStatus = (postsStatus) => ({
 const setPosts = (posts) => ({
   type: 'SET_POSTS',
   posts: posts
-})
+});
 
 export const fetchPosts = () => (dispatch) => {
   dispatch(setPostsStatus('FETCHING'));
 
   agent.get('http://localhost:3000/posts')
-    .then(response => {
+    .then((response) => {
       dispatch(setPostsStatus('SUCCESS'));
       dispatch(setPosts(response.body));
     })
-    .catch(err => dispatch(setPostsStatus('FAILED')));
+    .catch(() => dispatch(setPostsStatus('FAILED')));
 };

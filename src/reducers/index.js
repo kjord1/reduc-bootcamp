@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 
 import ProfileName from './profile_name';
 import PostsStatus from './posts_status';

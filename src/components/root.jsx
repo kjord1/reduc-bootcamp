@@ -1,12 +1,7 @@
 import React from 'react';
 
-import {
-  applyMiddleware,
-  createStore
-} from 'redux';
-import {
-  Provider
-} from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
+import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import reducers from '../reducers';
@@ -18,9 +13,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   reducers,
-  composeEnhancers(
-    applyMiddleware(thunk)
-  )
+  composeEnhancers(applyMiddleware(thunk))
 );
 
 store.dispatch(fetchPosts());
@@ -33,7 +26,7 @@ const RootComponent = () => (
           <span className="label label-primary">Reduxbook</span>
         </h1>
       </div>
-      <br/>
+      <br />
       <ProfileName />
       <Posts />
     </div>

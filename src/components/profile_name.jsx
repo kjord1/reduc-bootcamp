@@ -8,8 +8,8 @@ const ProfileNameComponent = ({
 }) => (
   <div>
     <h1>
-      <span className="fa fa-user" aria-hidden="true"/>&nbsp;
-      {profileName ? profileName : 'Unknown User'}
+      <span className="fa fa-user" aria-hidden="true" />&nbsp;
+      {profileName || 'Unknown User'}
     </h1>
     <div className="input-group">
       <input
@@ -20,7 +20,7 @@ const ProfileNameComponent = ({
       />
       <span className="input-group-btn">
         <button type="button" className="btn btn-danger" onClick={clearProfileName}>
-          <span className="fa fa-eraser"/>
+          <span className="fa fa-eraser" />
         </button>
       </span>
     </div>

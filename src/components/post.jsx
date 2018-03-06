@@ -5,15 +5,15 @@ const PostComponent = ({
   post
 }) => (
   <div data-id={post.id} className="panel panel-default">
-  <div className="panel-heading">
-    <div className="text-right">
-      {post.created}
+    <div className="panel-heading">
+      <div className="text-right">
+        {post.created}
+      </div>
+    </div>
+    <div className="panel-body">
+      {post.text}
     </div>
   </div>
-  <div className="panel-body">
-    { post.text }
-  </div>
-</div>
 );
 
 PostComponent.displayName = 'PostComponent';

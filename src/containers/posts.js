@@ -1,6 +1,4 @@
-import {
-  connect
-} from 'react-redux';
+import { connect } from 'react-redux';
 
 import PostsComponent from '../components/posts';
 import { fetchPosts } from '../actions/posts';
