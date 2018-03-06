@@ -5,7 +5,7 @@ module.exports = {
     "comma-dangle": ["error", "never"],
     "arrow-parens": ["error", "always"],
     "import/prefer-default-export": "warn",
-    "no-underscore-dangle": "warn",
+    "no-underscore-dangle": "off",
     "object-shorthand": ["error", "consistent-as-needed"]
   },
   env: {
